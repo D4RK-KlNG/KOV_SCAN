@@ -7,73 +7,111 @@ Developed by **D4RK-K1NG**
 
 <br>
 
-<img src="https://img.shields.io/badge/Python-3.x-111111?style=for-the-badge&logo=python">
-<img src="https://img.shields.io/badge/Security-Framework-111111?style=for-the-badge">
-<img src="https://img.shields.io/badge/Version-v3.0-111111?style=for-the-badge">
-<img src="https://img.shields.io/badge/License-Educational-111111?style=for-the-badge">
+<img src="https://img.shields.io/badge/Python-3.x-0f0f0f?style=for-the-badge&logo=python">
+<img src="https://img.shields.io/badge/Security-Framework-0f0f0f?style=for-the-badge">
+<img src="https://img.shields.io/badge/Version-v3.0-0f0f0f?style=for-the-badge">
+<img src="https://img.shields.io/badge/Platform-Linux%20%7C%20Termux%20%7C%20Windows-0f0f0f?style=for-the-badge">
+
+<br><br>
+
+High-performance reconnaissance and vulnerability scanning framework  
+built for authorized penetration testing and security research.
 
 </div>
 
 ---
 
-## Overview
+# Overview
 
-KOVSCAN is a high-performance vulnerability assessment and reconnaissance framework designed for authorized penetration testing and cybersecurity research.
+KOVSCAN is a multi-phase security assessment framework that combines:
 
-The framework combines crawling, enumeration, service analysis, and vulnerability detection into a unified automated pipeline built for modern web application testing.
+- Web Crawling
+- Reconnaissance
+- Port Scanning
+- Directory Enumeration
+- Subdomain Discovery
+- Vulnerability Detection
+- Sensitive Data Exposure Analysis
+
+into a unified automated pipeline.
+
+The framework is designed for security professionals, penetration testers, bug bounty researchers, and cybersecurity enthusiasts performing authorized testing.
 
 ---
 
-## Core Modules
+# Repository
+
+Source code and updates:
+
+[github.com/D4RK-KlNG/KOV_SCAN](https://github.com/D4RK-KlNG/KOV_SCAN/?utm_source=chatgpt.com)
+
+---
+
+# Features
 
 | Module | Description |
 |--------|-------------|
 | Spider Engine | Recursive crawling and reconnaissance |
-| Port Scanner | Multi-threaded TCP scanning and banner grabbing |
-| Directory Enumeration | Hidden path and sensitive file discovery |
-| Subdomain Enumeration | DNS resolution and HTTP probing |
-| Vulnerability Engine | Automated vulnerability detection |
-| Sensitive Data Scanner | Secret and credential exposure detection |
+| Port Scanner | Multi-threaded TCP scanning |
+| Directory Enumeration | Hidden file and endpoint discovery |
+| Subdomain Enumeration | DNS and HTTP probing |
+| Vulnerability Engine | Automated vulnerability testing |
+| Sensitive Data Scanner | Credential and secret detection |
+| HTML Reporting | Detailed professional reports |
 
 ---
 
-## Spider Engine
+# Spider Engine
 
 The crawler performs deep reconnaissance against target applications.
 
-### Features
+## Capabilities
 
 - Recursive crawling
 - Form extraction
-- JavaScript endpoint discovery
-- HTML comment analysis
-- API endpoint detection
+- Parameter discovery
 - Email harvesting
-- Technology fingerprinting
+- HTML comment analysis
+- JavaScript endpoint extraction
+- API endpoint detection
 - Robots.txt parsing
-- Sitemap extraction
-- Session token analysis
-- JWT discovery
-- WebSocket detection
+- Sitemap discovery
+- Technology fingerprinting
+- JWT token detection
+- WebSocket endpoint detection
+
+## Extracted Data
+
+```txt
+URLs
+Forms
+Parameters
+Comments
+Emails
+JavaScript Files
+API Endpoints
+Technologies
+Session Tokens
+```
 
 ---
 
-## Port Scanner
+# Port Scanner
 
-The scanning engine supports high-speed concurrent port scanning with service fingerprinting.
+High-speed multi-threaded TCP scanner with service fingerprinting.
 
-### Capabilities
+## Features
 
-- Multi-threaded TCP scanning
 - 200+ common ports
+- Concurrent scanning
 - Banner grabbing
-- SSL service detection
+- SSL detection
 - Reverse DNS lookup
 - HTTP/HTTPS probing
-- Timeout handling
 - Service identification
+- Configurable timeout support
 
-### Supported Services
+## Supported Services
 
 | Port | Service |
 |------|----------|
@@ -92,11 +130,11 @@ The scanning engine supports high-speed concurrent port scanning with service fi
 
 ---
 
-## Directory Enumeration
+# Directory Enumeration
 
-The directory engine performs dictionary-based discovery of hidden files, endpoints, and administrative panels.
+Dictionary-based hidden content discovery engine.
 
-### Detection Targets
+## Detection Targets
 
 ```txt
 /admin
@@ -107,15 +145,30 @@ The directory engine performs dictionary-based discovery of hidden files, endpoi
 /backup.zip
 /config.php
 /database.sql
+/uploads
+/api
+```
+
+## Supported Extensions
+
+```txt
+.php
+.asp
+.aspx
+.jsp
+.do
+.action
+.html
+.htm
 ```
 
 ---
 
-## Subdomain Enumeration
+# Subdomain Enumeration
 
-The subdomain engine identifies accessible hosts and exposed infrastructure.
+DNS resolution and HTTP probing engine for infrastructure discovery.
 
-### Example Targets
+## Example Targets
 
 ```txt
 admin.target.com
@@ -127,9 +180,18 @@ staging.target.com
 beta.target.com
 ```
 
+## Features
+
+- DNS resolution
+- Alive host detection
+- HTTP status detection
+- Page title extraction
+- Server header collection
+- Wildcard detection
+
 ---
 
-## Vulnerability Engine
+# Vulnerability Engine
 
 KOVSCAN includes automated checks for multiple vulnerability classes.
 
@@ -151,34 +213,72 @@ KOVSCAN includes automated checks for multiple vulnerability classes.
 
 ---
 
-## Detection Techniques
+# Detection Techniques
 
-### SQL Injection
+## SQL Injection
 
 - Error-based injection
 - Boolean-based injection
-- Time-based injection
 - UNION-based injection
+- Time-based payload testing
 
-### Cross-Site Scripting
+### Example Payloads
+
+```sql
+'
+' OR '1'='1
+admin'--
+SLEEP(5)
+WAITFOR DELAY '0:0:5'
+```
+
+---
+
+## Cross-Site Scripting
 
 - Reflected XSS
 - Stored XSS
 - DOM-based XSS
 
-### Command Injection
+### Example Payloads
 
-- Synchronous execution detection
-- Time-delay analysis
-- OS command payload testing
-
-### SSRF Detection
-
-Internal service probing and cloud metadata targeting.
+```html
+<script>alert(1)</script>
+<img src=x onerror=alert(1)>
+"><svg/onload=alert(1)>
+```
 
 ---
 
-## Sensitive Data Detection
+## SSRF Detection
+
+Internal service probing and cloud metadata targeting.
+
+### Internal Targets
+
+```txt
+127.0.0.1
+localhost
+169.254.169.254
+metadata.google.internal
+```
+
+---
+
+## Command Injection
+
+### Example Payloads
+
+```bash
+;id
+&& whoami
+| uname -a
+$(sleep 5)
+```
+
+---
+
+# Sensitive Data Detection
 
 The framework searches for exposed credentials and secrets including:
 
@@ -188,21 +288,46 @@ The framework searches for exposed credentials and secrets including:
 - SMTP Credentials
 - Database Passwords
 - Firebase Secrets
-- Private Keys
 - GitHub Tokens
+- SSH Private Keys
+- Configuration Secrets
 
 ---
 
-## Installation
+# Output
 
-### Clone Repository
+KOVSCAN generates a detailed HTML report containing:
 
-```bash
-git clone https://github.com/D4RK-K1NG/KOVSCAN.git
-cd KOVSCAN
+- Executive summary
+- Severity statistics
+- Vulnerability breakdown
+- Vulnerability evidence
+- Payload details
+- Open ports and services
+- Directory findings
+- Subdomain enumeration results
+- Crawl statistics
+- Technology fingerprinting
+- Extracted forms and parameters
+
+## Default Report File
+
+```txt
+kovscan_report.html
 ```
 
-### Install Dependencies
+---
+
+# Installation
+
+## Clone Repository
+
+```bash
+git clone https://github.com/D4RK-KlNG/KOV_SCAN.git
+cd KOV_SCAN
+```
+
+## Install Requirements
 
 ```bash
 pip install -r requirements.txt
@@ -210,41 +335,92 @@ pip install -r requirements.txt
 
 ---
 
-## Usage
-
-### Basic Scan
+# Usage
 
 ```bash
-python kovscan.py -u https://target.com
-```
-
-### Deep Scan
-
-```bash
-python kovscan.py -u https://target.com --deep
-```
-
-### Port Scan
-
-```bash
-python kovscan.py --ports target.com
-```
-
-### Directory Enumeration
-
-```bash
-python kovscan.py --dirs https://target.com
-```
-
-### Subdomain Enumeration
-
-```bash
-python kovscan.py --subs target.com
+python kovscan.py <target> [options]
 ```
 
 ---
 
-## Example Output
+# Basic Examples
+
+## Full Scan
+
+```bash
+python kovscan.py https://example.com
+```
+
+## Quick Scan
+
+```bash
+python kovscan.py https://example.com --quick
+```
+
+## Scan Using Proxy
+
+```bash
+python kovscan.py https://example.com --proxy http://127.0.0.1:8080
+```
+
+## Scan with Authenticated Session
+
+```bash
+python kovscan.py https://example.com --cookie "PHPSESSID=abc123"
+```
+
+## Port Scan Only
+
+```bash
+python kovscan.py 192.168.1.100 --only-port
+```
+
+## Directory Enumeration Only
+
+```bash
+python kovscan.py https://example.com --only-dir
+```
+
+## Subdomain Enumeration Only
+
+```bash
+python kovscan.py https://example.com --only-sub
+```
+
+## Vulnerability Scan Only
+
+```bash
+python kovscan.py https://example.com --only-vuln
+```
+
+---
+
+# Options
+
+| Option | Description |
+|--------|-------------|
+| -h, --help | Show help message |
+| --no-crawl | Skip web crawling |
+| --no-port | Skip port scanning |
+| --no-dir | Skip directory enumeration |
+| --no-sub | Skip subdomain enumeration |
+| --no-vuln | Skip vulnerability scanning |
+| --threads N | Thread count (default: 30) |
+| --timeout N | Request timeout |
+| --depth N | Crawl depth |
+| --max-pages N | Maximum pages to crawl |
+| --cookie NAME=VAL | Add cookie |
+| --proxy URL | Use HTTP/HTTPS/SOCKS proxy |
+| --output FILE | Report filename |
+| --only-vuln | Vulnerability scan only |
+| --only-port | Port scan only |
+| --only-dir | Directory enumeration only |
+| --only-sub | Subdomain enumeration only |
+| --quick | Quick scan mode |
+
+---
+
+# Example Output
 
 ```txt
 [+] Target: https://target.com
@@ -260,29 +436,42 @@ python kovscan.py --subs target.com
 
 ---
 
-## Performance
+# Performance
 
 | Feature | Details |
 |----------|---------|
 | Concurrent Workers | High-speed scanning |
 | Async Networking | Optimized requests |
 | Smart Retry Logic | Improved reliability |
-| Adjustable Timeouts | Flexible performance tuning |
+| Adjustable Timeouts | Flexible tuning |
 | Export Formats | TXT / JSON / HTML |
 
 ---
 
-## Legal Disclaimer
+# Legal Notice
 
-KOVSCAN is intended strictly for authorized security testing, educational purposes, and research.
-
-Unauthorized scanning or exploitation of systems without explicit permission may violate applicable laws and regulations.
-
-The developer assumes no responsibility for misuse or damages caused by this software.
+```txt
+╔═══════════════════════════════════════════════════════════════╗
+║                                                               ║
+║   KOVSCAN is a penetration testing framework intended         ║
+║   for AUTHORIZED security professionals ONLY.                 ║
+║                                                               ║
+║   Unauthorized testing against systems you do not own         ║
+║   or have explicit written permission to assess may           ║
+║   violate applicable laws and regulations.                    ║
+║                                                               ║
+║   Users are solely responsible for ensuring compliance        ║
+║   with local, state, federal, and international laws.         ║
+║                                                               ║
+║   The developer assumes no liability for misuse, damage,      ║
+║   or illegal activities performed using this software.        ║
+║                                                               ║
+╚═══════════════════════════════════════════════════════════════╝
+```
 
 ---
 
-## Developer
+# Developer
 
 ```txt
 Developer : D4RK-K1NG
@@ -296,6 +485,6 @@ Category  : Vulnerability Assessment Framework
 <div align="center">
 
 KOVSCAN v3.0  
-Advanced Security Assessment Framework
+Advanced Vulnerability Assessment Framework
 
 </div>
