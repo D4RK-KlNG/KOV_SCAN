@@ -451,22 +451,19 @@ python kovscan.py https://example.com --only-vuln
 # Legal Notice
 
 ```txt
-╔═══════════════════════════════════════════════════════════════╗
+╔══════════════════════════════════════════════════════╗
 ║                                                               ║
 ║   KOVSCAN is a penetration testing framework intended         ║
 ║   for AUTHORIZED security professionals ONLY.                 ║
 ║                                                               ║
-║   Unauthorized testing against systems you do not own         ║
-║   or have explicit written permission to assess may           ║
-║   violate applicable laws and regulations.                    ║
+║   Unauthorized use against systems you do not own or          ║
+║   do not have explicit written permission to test             ║
+║   is ILLEGAL.                                                 ║
 ║                                                               ║
-║   Users are solely responsible for ensuring compliance        ║
-║   with local, state, federal, and international laws.         ║
+║   Users are responsible for complying with all                ║
+║   applicable local, state, federal, and international laws.   ║
 ║                                                               ║
-║   The developer assumes no liability for misuse, damage,      ║
-║   or illegal activities performed using this software.        ║
-║                                                               ║
-╚═══════════════════════════════════════════════════════════════╝
+╚══════════════════════════════════════════════════════╝
 ```
 
 ---
