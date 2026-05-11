@@ -9,6 +9,9 @@ requests>=2.28.0
 beautifulsoup4>=4.11.0
 urllib3>=1.26.0
 
+#CRYPTOGRAPHY
+
+pycryptodome>=3.19.0
 
 #NETWORK & RECONNAISSANCE
 
@@ -21,7 +24,6 @@ ipwhois>=1.2.0
 netaddr>=0.9.0
 pyasn>=1.6.0
 
-
 #WEB APPLICATION TESTING
 
 lxml>=4.9.0
@@ -32,12 +34,10 @@ markdown>=3.4.0
 jinja2>=3.1.0
 cssutils>=2.6.0
 
-
 #SSL / TLS
 
 cryptography>=39.0.0
 pyOpenSSL>=23.0.0
-
 
 #TERMINAL UI & FORMATTING
 
@@ -45,20 +45,17 @@ colorama>=0.4.6
 termcolor>=2.3.0
 rich>=13.0.0
 
-
 #OUTPUT & REPORTING
 
 tabulate>=0.9.0
 pdfkit>=1.0.0
 weasyprint>=57.0
 
-
 #PERFORMANCE & ASYNC
 
 aiohttp>=3.8.0
 aiodns>=3.0.0
 asyncio>=3.4.3
-
 
 #UTILITIES & OSINT
 
@@ -69,7 +66,6 @@ validators>=0.20.0
 fuzzywuzzy>=0.18.0
 python-Levenshtein>=0.21.0
 
-
 #DEVELOPMENT DEPENDENCIES
 
 pytest>=7.4.0
@@ -77,4 +73,4 @@ pytest-cov>=4.1.0
 black>=23.0.0
 flake8>=6.1.0
 mypy>=1.5.0
-isort>=5.12.0 
+isort>=5.12.0
