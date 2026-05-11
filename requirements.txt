@@ -1,16 +1,16 @@
-=============================================================================
-KOVSCAN v3.0 — Requirements
-Author: D4RK-K1NG
-=============================================================================
+#=============================================================================
+#KOVSCAN v3.0 — Requirements
+#Author: D4RK-K1NG
+#=============================================================================
 
-CORE DEPENDENCIES
+#CORE DEPENDENCIES
 
 requests>=2.28.0
 beautifulsoup4>=4.11.0
 urllib3>=1.26.0
 
 
-NETWORK & RECONNAISSANCE
+#NETWORK & RECONNAISSANCE
 
 scapy>=2.5.0
 dnspython>=2.3.0
@@ -22,7 +22,7 @@ netaddr>=0.9.0
 pyasn>=1.6.0
 
 
-WEB APPLICATION TESTING
+#WEB APPLICATION TESTING
 
 lxml>=4.9.0
 html5lib>=1.1
@@ -33,34 +33,34 @@ jinja2>=3.1.0
 cssutils>=2.6.0
 
 
-SSL / TLS
+#SSL / TLS
 
 cryptography>=39.0.0
 pyOpenSSL>=23.0.0
 
 
-TERMINAL UI & FORMATTING
+#TERMINAL UI & FORMATTING
 
 colorama>=0.4.6
 termcolor>=2.3.0
 rich>=13.0.0
 
 
-OUTPUT & REPORTING
+#OUTPUT & REPORTING
 
 tabulate>=0.9.0
 pdfkit>=1.0.0
 weasyprint>=57.0
 
 
-PERFORMANCE & ASYNC
+#PERFORMANCE & ASYNC
 
 aiohttp>=3.8.0
 aiodns>=3.0.0
 asyncio>=3.4.3
 
 
-UTILITIES & OSINT
+#UTILITIES & OSINT
 
 python-dotenv>=1.0.0
 pyyaml>=6.0
@@ -70,7 +70,7 @@ fuzzywuzzy>=0.18.0
 python-Levenshtein>=0.21.0
 
 
-DEVELOPMENT DEPENDENCIES
+#DEVELOPMENT DEPENDENCIES
 
 pytest>=7.4.0
 pytest-cov>=4.1.0
